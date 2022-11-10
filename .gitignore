@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+*.x
+
+external/spglib/*
+runme-local.sh
