@@ -35,3 +35,4 @@
 
 external/spglib/*
 runme-local.sh
+#.vscode
