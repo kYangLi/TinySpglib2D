@@ -224,7 +224,7 @@ int spglib_2d_tovasp(SpglibDataset* &spg_dataset,
 
 // Print Help info
 void print_help_info(){
-  cout << "[help] ./spglib_2d_tovasp.x -f <filename> -p <symprec>";
+  cout << "[help] ./spglib_2d_tovasp.x -f <filename> -p <symprec>" << endl;
 }
 
 // Read in the command line parameters
