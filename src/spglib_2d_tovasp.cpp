@@ -163,11 +163,12 @@ int readin_data_from_poscar(string &file_info, string &scale_factor,
                             double lattice_vec[3][3], int* &type_list, 
                             double* &seq_atom_coords, int &atoms_num,
                             string filename="POSCAR"){
-  ifstream poscar_file(filename);
   vector<string> buffer;
   // - Read in all content in the file
+  ifstream poscar_file(filename); // Open POSCAR file
   if (poscar_is_not_open(poscar_file, filename)) return 1;
   readlines(poscar_file, buffer); // Read files all content to `buffer`.
+  poscar_file.close(); // Close the POSCAR file
   if (poscar_is_not_valid(buffer)) return 1;
   // - Read in the POSCAR info.s
   readposcar_header(buffer, file_info, scale_factor);
